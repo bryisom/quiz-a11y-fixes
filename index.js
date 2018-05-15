@@ -141,27 +141,26 @@ const quizBook = [
 function generateQuestion () {
   if (questionNumber < quizBook.length) {
     return `<div class="question-${questionNumber}">
-                <h1>${quizBook[questionNumber].question}</h1>
+                <h2>${quizBook[questionNumber].question}</h2>
                 <form>
                     <fieldset>
-                      <legend>Question</legend>
-                        <label class ="answerOption" aria-labelledby = "answers">
-                            <input type = "radio"  value = "${quizBook[questionNumber].answers[0]}" name ="answer" required>
+                        <label class ="answerOption">
+                            <input type = "radio" value = "${quizBook[questionNumber].answers[0]}" name ="answer" required>
                             <span>${quizBook[questionNumber].answers[0]}</span>
                         </label>
-                        <label class ="answerOption" >
-                            <input type = "radio"  value = "${quizBook[questionNumber].answers[1]}" name="answer" required>
+                        <label class ="answerOption">
+                            <input type ="radio" value ="${quizBook[questionNumber].answers[1]}" name="answer" required>
                             <span>${quizBook[questionNumber].answers[1]}</span>
                         </label>
-                        <label class ="answerOption" >
-                            <input type= "radio"  value = "${quizBook[questionNumber].answers[2]}" name="answer" required>
+                        <label class ="answerOption">
+                            <input type="radio" value ="${quizBook[questionNumber].answers[2]}" name="answer" required>
                             <span>${quizBook[questionNumber].answers[2]}</span>
                         </label>
-                        <label class ="answerOption" >
-                            <input type ="radio"  value = "${quizBook[questionNumber].answers[3]}" name="answer" required>
+                        <label class ="answerOption">
+                            <input type ="radio" value ="${quizBook[questionNumber].answers[3]}" name="answer" required>
                             <span>${quizBook[questionNumber].answers[3]}</span>
                         </label>
-                        <button type ="submit" role= "button" class ="submitButton">Submit</button>
+                        <button type ="submit" class ="submitButton">Submit</button>
                     </fieldset>
                 </form>
             </div>`;
@@ -231,14 +230,14 @@ function ifAnswerIsWrong () {
 function userAnswerFeedbackCorrect () {
       let correctAnswer = `${quizBook[questionNumber].correctAnswer}`;
       let correctText = `${quizBook[questionNumber].rightText}`;
-      $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="picture"><img src="${quizBook[questionNumber].picture}" alt="${quizBook[questionNumber].altText}"/></div><p><b><h1>Your answer is correct!</h1></b><br><span>${correctAnswer}${correctText}</span></p><button type=button class="nextButton">Next</button></div>`);
+      $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="picture"><img src="${quizBook[questionNumber].picture}" alt="${quizBook[questionNumber].altText}"/></div><p><b>Your answer is correct!</b><br><span>${correctAnswer}${correctText}</span></p><button type=button class="nextButton">Next</button></div>`);
 }
 
 //user feedback for wrong answer
 function userAnswerFeedbackWrong () {
       let correctAnswer = `${quizBook[questionNumber].correctAnswer}`;
       let correctText = `${quizBook[questionNumber].rightText}`;
-      $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="picture"><img src="${quizBook[questionNumber].picture}" alt="${quizBook[questionNumber].altText}"/></div><p><b><h1>Your answer is incorrect!</h1></b><br>The correct answer is <span>"${correctAnswer}"</span><br><span>${correctAnswer}${correctText}</span></p><button type=button class="nextButton">Next</button></div>`);
+      $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="picture"><img src="${quizBook[questionNumber].picture}" alt="${quizBook[questionNumber].altText}"/></div><p><b>Your answer is incorrect!</b><br>the correct answer is <span>"${correctAnswer}"</span><br><span>${correctAnswer}${correctText}</span></p><button type=button class="nextButton">Next</button></div>`);
 }
 
 //update score text
@@ -250,13 +249,13 @@ function updateScore () {
 //final output for quiz, giving tally and comments
 function renderResults () {
   if (score >= 8) {
-        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h1>Great Job!</h1><img src="https://www.gannett-cdn.com/-mm-/16837e0bd9311e6ab59f411340a627042bcba398/c=0-321-1793-1669&r=x404&c=534x401/local/-/media/2017/06/28/OHGroup/Mansfield/636342456286351922-July-4-fireworks.jpg" alt="Fireworks exploding over USA flag"/><p>You got ${score} / 10</p><p>Are you at Geography Teacher?</p><button class="restartButton">Restart Quiz</button></div>`);
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Great Job!</h3><img src="https://www.gannett-cdn.com/-mm-/16837e0bd9311e6ab59f411340a627042bcba398/c=0-321-1793-1669&r=x404&c=534x401/local/-/media/2017/06/28/OHGroup/Mansfield/636342456286351922-July-4-fireworks.jpg" alt="Fireworks exploding over USA flag"/><p>You got ${score} / 10</p><p>Are you at Geography Teacher?</p><button class="restartButton">Restart Quiz</button></div>`);
   } 
   else if (score < 8 && score >= 5) {
-        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h1>Keep Up The Good Work!</h1><img src="https://d1avok0lzls2w.cloudfront.net/uploads/og_image/560d6946a1f612.09180931.jpg" alt="Two people standing at Whiteboard, one looking confused"/><p>You got ${score} / 10</p><p>It seems you paid some attention in school.</p><button class="restartButton">Restart Quiz</button></div>`);
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Keep Up The Good Work!</h3><img src="https://d1avok0lzls2w.cloudfront.net/uploads/og_image/560d6946a1f612.09180931.jpg" alt="Two people standing at Whiteboard, one looking confused"/><p>You got ${score} / 10</p><p>It seems you paid some attention in school.</p><button class="restartButton">Restart Quiz</button></div>`);
   } 
   else {
-        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h1>Well, The Important Thing Is That You Tried.</h1><img src="https://cdn2.hercampus.com/160202-studying-stock.jpg" alt="Student Studying Hard"/><p>You got ${score} / 10</p><p>Don't Be Disheartened! One Can Never Truly Know The United States' Vast Geography!</p><button class="restartButton">Restart Quiz</button></div>`);
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Well, The Important Thing Is That You Tried.</h3><img src="https://cdn2.hercampus.com/160202-studying-stock.jpg" alt="Student Studying Hard"/><p>You got ${score} / 10</p><p>Don't Be Disheartened! One Can Never Truly Know The United States' Vast Geography!</p><button class="restartButton">Restart Quiz</button></div>`);
   }
 }
 
