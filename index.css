@@ -1,0 +1,226 @@
+* {
+      box-sizing: border-box;
+  }
+/*centers everything inside of main div*/  
+main div {
+      margin: 0 auto;
+}
+header, footer { 
+      height: 60px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+         
+}
+header {
+      font-family: 'IBM+Plex+Sans:700', sans-serif; 
+      font-size:35px; padding: 5px; position:inherit;
+      color: white;
+      text-shadow: 3px 2px 1px #384270;
+}
+header {
+      margin: 0 auto;
+}
+label {
+      font-family: 'IBM+Plex+Sans:700', sans-serif;
+      padding: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      color: white;
+      text-shadow: 2px 2px black;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+      line-height: 22px
+}
+/* colours the form answers       */
+label:nth-child(1) {
+      background-color: #af6337;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+}
+label:nth-child(2) {
+      background-color: #af6337;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+}
+label:nth-child(3) {
+      background-color: #af6337;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+}
+label:nth-child(4) {
+      background-color: #af6337;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+}
+h1 {
+      font-size: 20px;
+}
+.quizStart { 
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Map_of_USA_with_state_names.svg');
+      width:900px;
+      height:580px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+}
+.correctFeedback img {
+      width: 400px;
+      height: auto;
+      display: block;
+      border-radius: 2.5%;
+      background-color: #c9a844;
+      margin: auto;
+      padding: 10px;
+      margin-bottom: 20px
+}
+.correctFeedback {
+      font-family: 'IBM+Plex+Sans:700', sans-serif;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(245, 255, 255, 1) 0%, #f2b529 100%);
+      padding-top: 30px;
+      border-radius: 2.5%;
+}
+.correctFeedback p {
+      font-family: 'IBM+Plex+Sans:700', sans-serif;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      text-transform: uppercase;
+      margin-left: 20px;
+      margin-right: 20px
+}
+.correctFeedback span {
+      color: black;
+}
+/*  center justified  */
+h2 {
+      text-align: center;
+      color: white;
+      text-shadow: 3px 2px 1px #384270;
+}
+.startButton, form button, .nextButton, .restartButton {
+      background: #af6337;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+      /*font-family: Arial;*/
+      color: white;
+      font-size: 1.5em;
+      padding: 5px 15px;
+      text-decoration: none;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      font-family: 'IBM+Plex+Sans:700', sans-serif;
+}
+/* colour of background, set font-family   */
+body{
+      background-color: #827c7c;
+      font-family: 'IBM+Plex+Sans:700', sans-serif;
+}
+
+fieldset {
+      border: none;
+      box-shadow: 6px 5px 24px #666666;
+}
+/*initally hide form on start, sets width to half of container  */
+.questionAnswerForm {
+      display: none;
+      width: 50%;
+}
+.answer {
+      flex: auto;
+}
+input:checked {
+      border: 8px solid #ebca52;
+}
+input[type=radio] {
+      flex: none;
+      margin-right: 10px;
+}
+
+footer ul li {
+      padding: 10px;
+      list-style: none;
+      width: 100%;
+      font-size: 25px;
+      font-weight: bolder;
+      color: white;
+      text-shadow: 3px 2px 1px #384270;
+   
+    
+}
+footer ul {
+      justify-content: center;
+      margin-top: 20px;
+      padding: 0px;
+}
+span {
+      font-family: 'IBM+Plex+Sans:700', sans-serif;
+}  
+
+@media screen and (max-width: 1000px) {
+    
+    header  {
+        font-size: 1.5em;
+        margin: 10px;
+        text-align: center;
+        color: white;
+    }
+    h1 {
+        font-size: 12px
+    }
+    footer ul li {
+        padding: 10px;
+        font-size: 18px
+    }
+    .startButton {
+        width: 100%;
+    }
+    .quizStart {
+        width: 300px;
+        height: 400px;
+        padding: 40px;
+        margin-top: 0
+    }
+    h2 {
+        font-size: 18px
+    }
+    .questionAnswerForm {
+        width: 100%;
+        padding: 20px;
+        max-height: 600px;
+        margin-top: 0
+    }
+    label {
+        font-size: 16px;
+        padding: 15px
+    }
+    .correctFeedback img {
+        width: 200px;
+        height: auto
+    }
+    .correctFeedback p {
+        font-size: 16px;
+        margin: 0 15px
+    }
+    .results p:first-of-type {
+        font-size: 18px
+    }
+    h3 {
+        font-size: 20px
+    }
+}
