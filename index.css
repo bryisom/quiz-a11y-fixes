@@ -34,12 +34,6 @@ label {
       line-height: 22px
 }
 /* colours the form answers       */
-label:nth-child(1) {
-      background-color: #af6337;
-      border-radius: 8px;
-      text-shadow: 3px 2px 1px #384270;
-      box-shadow: 6px 5px 24px #666666;
-}
 label:nth-child(2) {
       background-color: #af6337;
       border-radius: 8px;
@@ -53,6 +47,12 @@ label:nth-child(3) {
       box-shadow: 6px 5px 24px #666666;
 }
 label:nth-child(4) {
+      background-color: #af6337;
+      border-radius: 8px;
+      text-shadow: 3px 2px 1px #384270;
+      box-shadow: 6px 5px 24px #666666;
+}
+label:nth-child(5) {
       background-color: #af6337;
       border-radius: 8px;
       text-shadow: 3px 2px 1px #384270;
